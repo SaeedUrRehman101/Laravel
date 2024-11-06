@@ -14,7 +14,7 @@ All steps for installing Composer, Laravel, and Artisan commands required for th
 
 ### Laravel Installation
 
-- **composer globall require laravel installer**
+- **composer global require laravel installer**
 - **laravel new project_name**
 - **starter kit**
 - **select frameWork**
