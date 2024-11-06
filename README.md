@@ -7,6 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+## LARAVEL IMPORTANT COMMANDS:
+
+All steps for installing Composer, Laravel, and Artisan commands required for the setup, as well as guidance on managing live server session timing. Additionally, common issues encountered when pulling a repository from GitHub—such as unexpected removal of some folders and files during the pull process—are also covered.
+
+### Laravel Installation
+
+-composer globall require laravel installer
+-laravel new project_name
+-starter kit
+-select frameWork
+-migration of dataBase
+
+
+### Artisan Commands
+
+-php artisan serve
+-php artisan make:migration create_tableName_table
+-php artisan config:cache
+-php artisan migrate
+-php artisan make:model modelName
+
+
+### Github 
+
+-composer install (for vendor folder)
+-cp .env.example .env
+-php artisan key:generate
+
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
