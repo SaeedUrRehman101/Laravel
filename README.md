@@ -14,27 +14,27 @@ All steps for installing Composer, Laravel, and Artisan commands required for th
 
 ### Laravel Installation
 
--composer globall require laravel installer
--laravel new project_name
--starter kit
--select frameWork
--migration of dataBase
+- **composer globall require laravel installer**
+- **laravel new project_name**
+- **starter kit**
+- **select frameWork**
+- **migration of dataBase**
 
 
 ### Artisan Commands
 
--php artisan serve
--php artisan make:migration create_tableName_table
--php artisan config:cache
--php artisan migrate
--php artisan make:model modelName
+- **php artisan serve**
+- **php artisan make:migration create_tableName_table**
+- **php artisan config:cache**
+- **php artisan migrate**
+- **php artisan make:model modelName**
 
 
 ### Github 
 
--composer install (for vendor folder)
--cp .env.example .env
--php artisan key:generate
+- **composer install (for vendor folder)**
+- **cp .env.example .env**
+- **php artisan key:generate**
 
 
 
