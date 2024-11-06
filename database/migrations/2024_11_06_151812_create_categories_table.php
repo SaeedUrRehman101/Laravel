@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('categories');
+
         Schema::create('categories', function (Blueprint $table) {
-            $table->id("category_Id");
+            $table->integer("category_Id")->primary()->autoIncrement();
             $table->string("categoryName",50);
             $table->string("categoryImage",100);
-            $table->timestamps();
+            $table->dropTimestamps();
         });
     }
 
@@ -25,5 +27,12 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('categories');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->timestamps();
+            $table->increments("category_Id"); //both queries work same just one thing is different they assign attr (unsigned) which work for positive "int" means they don't get negitive numbers inthe column
+            $table->string("categoryImage",100)->nullable; //means null value except kry ga
+        });
     }
 };
+
+// Rollback Karna: Agar kabhi aapko migration ko revert (undo) karna ho (using php artisan migrate:rollback), to down() method execute hoga aur timestamps() columns wapas aa jayenge.
