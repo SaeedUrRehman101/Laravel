@@ -17,7 +17,8 @@ return new class extends Migration
             $table->integer("category_Id")->primary()->autoIncrement();
             $table->string("categoryName",50);
             $table->string("categoryImage",100);
-            $table->dropTimestamps();
+            $table->timestamps();
+            // $table->dropTimestamps();
         });
     }
 
@@ -28,7 +29,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('categories');
         Schema::create('categories', function (Blueprint $table) {
-            $table->timestamps();
+            // $table->timestamps();
             $table->increments("category_Id"); //both queries work same just one thing is different they assign attr (unsigned) which work for positive "int" means they don't get negitive numbers inthe column
             $table->string("categoryImage",100)->nullable; //means null value except kry ga
         });
