@@ -15,5 +15,12 @@ class categoryController extends Controller
         $category->save();
         return back()->with("categories","categoreis Submitted.");
     }
+
+    function viewCategory(){
+        $allCate = Category::all();
+        // dd($allCate);
+        return view("dashmin.categories",compact("allCate"));
+    }
+
 }
 

@@ -26,8 +26,7 @@
     </div>
 </div>
 @if(session("categories"))
-<script>alert('category Added.');</script>
-@else
+<script>alert('category added Sucessfully.');</script>
 @endif
 @include('components/footer');
 
