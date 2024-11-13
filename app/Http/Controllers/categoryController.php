@@ -22,5 +22,24 @@ class categoryController extends Controller
         return view("dashmin.categories",compact("allCate"));
     }
 
+    function updateCategory(Request $request){
+        $updateCate = Category::find($request->cateId);
+        if(isset($request->cateImg)){
+            $categoryImage = time().'.'.$request->cateImg->extension();
+            $request->cateImg->move(public_path('assets/img/category'),$categoryImage);
+            $updateCate->categoryImage = $categoryImage;
+        }
+        $updateCate->categoryName = $request->cateName;
+        $updateCate->save();
+        return redirect('viewCategories')->with('update','updated sucessfully.');
+    }
+
+    function deleteCategory($id){
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('viewCategories')->with('deleted','deleted sucessfully');
+    }
+
+
 }
 

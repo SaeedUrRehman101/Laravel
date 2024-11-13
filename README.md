@@ -28,6 +28,7 @@ All steps for installing Composer, Laravel, and Artisan commands required for th
 - **php artisan config:cache**
 - **php artisan migrate**
 - **php artisan make:model modelName**
+- **php artisan make:controller controllerName**
 
 
 ### Github 
